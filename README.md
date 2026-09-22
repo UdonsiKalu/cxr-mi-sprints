@@ -23,5 +23,3 @@ Live work runs on the Almera lab (Jupyter + one shared Qwen). This repo is the *
 | 13 | Residual decomposition | [`13_residual_decomposition`](notebooks/02_observe/representation/13_residual_decomposition.ipynb) | Split `h` into attn + MLP + residual pieces |
 
 Detailed chapters can be found here: [`curriculum.md`](curriculum.md).
-
-Example of results saved in a notebook (GitHub displays the output): [`examples/01_capture_results.ipynb`](examples/01_capture_results.ipynb).
