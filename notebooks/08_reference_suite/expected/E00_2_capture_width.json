@@ -1,0 +1,9 @@
+{
+  "id": "E00_2_capture_width",
+  "status": "pass",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "notes": "Last-token residual width on teaching note (any deep layer). GUI E00.2 / look capture.",
+  "expect": {
+    "width": 3584
+  }
+}

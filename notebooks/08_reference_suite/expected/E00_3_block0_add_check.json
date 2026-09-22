@@ -1,0 +1,10 @@
+{
+  "id": "E00_3_block0_add_check",
+  "status": "pass",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "notes": "Layer-0 residual path adds: ||rin+attn+mlp-rout|| ≈ 0. GUI E00.3.",
+  "expect": {
+    "width": 3584,
+    "add_check": { "max": 0.05 }
+  }
+}

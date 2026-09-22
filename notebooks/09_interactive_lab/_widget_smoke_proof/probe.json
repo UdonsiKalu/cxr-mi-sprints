@@ -1,0 +1,9 @@
+{
+  "widgetCount": 0,
+  "hasRunExperiment": false,
+  "hasLayerDesc": true,
+  "hasVBoxRepr": false,
+  "hasIntSliderRepr": true,
+  "titleBits": false,
+  "bodySample": "Skip to main panel File Edit View Run Kernel Tabs Settings Help /12_interactive_lab/ Name Modified _widget_smoke_proof 5 seconds ago 00_WIDGET_SMOKE.executed.ipynb 5 minutes ago 00_WIDGET_SMOKE.ipynb 7 minutes ago 12_INTERACTIVE_LAB.ipynb 14 minutes ago README.md 24 minutes ago - Code Markdown Raw CXR local Qwen (faiss_gpu1) Widget smoke (browser) If you see a slider (not IntSlider(...) text), the Lab widget manager is working. Then the Interactive Lab panel below should show buttons / note / RUN. [ ]: import ipywidgets as w from IPython.display import display s = w.IntSlider(value=7, min=0, max=27, description=\"Layer\") display(s) print(\"ipywidgets\", w.__version__, \"\u2014 if slider above is interactive, frontend OK\") Interactive Lab \u2192 :8270 [ ]: import sys from pathlib import Path for _p in [Path.cwd().resolve(), *Path.cwd().resolve().parents]: if (_p / \"_lib\" / \"lab_widgets.py\").is_file(): sys.path.insert(0, str(_p / \"_lib\")); break if (_p / \"notebooks\" / \"_lib\" / \"lab_widgets.py\").is_file(): sys.path.insert(0, str(_p / \"notebooks\" / \"_lib\")); break else: raise RuntimeError(\"lab_widgets.py not found\") import lab_widgets lab_widgets.build_interactive_lab() Click to add a cell. 03_resid"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "CAUSAL_mlp_zero_candidates",
+  "status": "pass",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "notes": "Verified 2026-09-18 on 119f847c: among L16/18/20/22/24/26/27, max ||A-B|| at L27 but strongest |Δmargin| at L20 (~1.77). Representation ≠ causation; L20 earns zoom this prompt set.",
+  "prompt": "PROMPT_TEST + MLP last-token zero",
+  "expect": {
+    "max_sep_layer_among_candidates": 27,
+    "max_abs_delta_margin_layer": 20,
+    "same_layer": false,
+    "delta_margin_L20": { "min": 1.0 },
+    "flip_L20": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "00_WIDGET_SM\u2026 (5) - JupyterLab",
+  "url": "http://127.0.0.1:8266/doc/tree/12_interactive_lab/00_WIDGET_SMOKE.ipynb",
+  "widget_nodes": 1,
+  "ui_slider": 0,
+  "has_IntSlider_text": true,
+  "mime_widget": 0,
+  "has_frontend_ok": true,
+  "body_sample": "Skip to main panel\n/12_interactive_lab/\nName\nModified\n_widget_smoke_proof\n1 minute ago\n00_WIDGET_SMOKE.executed.ipynb\n20 minutes ago\n00_WIDGET_SMOKE.ipynb\n2 minutes ago\n12_INTERACTIVE_LAB.ipynb\n2 minutes ago\nREADME.md\n4 minutes ago\n-\nCode\nMarkdown\nRaw\nCXR local Qwen (faiss_gpu1)\nWidget smoke (browser)\n\nOpen this file in browser JupyterLab (not Cursor\u2019s notebook pane):\n\nhttp://127.0.0.1:8266/lab/tree/12_interactive_lab/00_WIDGET_SMOKE.ipynb\n\nIf you see a slider (not IntSlider(...) text), the Lab widget manager is working. Then the Interactive Lab panel below should show buttons / note / RUN.\n\nKernel: CXR local Qwen (faiss_gpu1). Run All. Hard-refresh once if you still see text reprs after a L",
+  "elapsed_s": 5.44
+}

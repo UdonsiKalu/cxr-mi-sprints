@@ -18,6 +18,13 @@ Live work runs on the Almera lab (Jupyter + one shared Qwen). This repo is the *
 
 [Issues](https://github.com/UdonsiKalu/cxr-mi-sprints/issues) are the tickets. Each issue is **one question**.
 
+
+## Jupyter notebooks
+
+The Observe curriculum (capture → residual decomposition) lives in [`notebooks/02_observe/representation/`](notebooks/02_observe/representation/). Start at [`notebooks/00_START_HERE.ipynb`](notebooks/00_START_HERE.ipynb).
+
+These are the teaching notebooks from the Almera lab. They run there against the shared Qwen on `:8270`. Opening them on GitHub is for reading; running them needs that lab.
+
 ## Sprint log
 
 | Week | Issue | Question | Outcome |

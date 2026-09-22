@@ -1,0 +1,14 @@
+{
+  "id": "SWEEP_sep_PROMPT_AB",
+  "status": "pass",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "notes": "Verified 2026-09-18 on kernel 119f847c: max ||A-B|| at L27≈109; L20≈27.2. Representation max ≠ zoom reason.",
+  "prompt": "PROMPT_A vs PROMPT_B",
+  "expect": {
+    "n_layers": 28,
+    "max_sep_layer": 27,
+    "max_sep": { "approx": 109.0, "tol": 0.2 },
+    "sep_L20": { "approx": 27.18, "tol": 0.25 },
+    "sep_L0": { "approx": 0.84, "tol": 0.5 }
+  }
+}

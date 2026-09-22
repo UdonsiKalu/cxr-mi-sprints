@@ -1,0 +1,11 @@
+{
+  "title": "00_WIDGET_SM\u2026 (4) - JupyterLab",
+  "widget_nodes": 0,
+  "ui_slider": 0,
+  "has_IntSlider_text": true,
+  "has_Layer": true,
+  "url": "http://127.0.0.1:8266/lab/tree/12_interactive_lab",
+  "elapsed_hint": true,
+  "body_sample": "Skip to main panel\nFile\nEdit\nView\nRun\nKernel\nTabs\nSettings\nHelp\n/12_interactive_lab/\nName\nModified\n_widget_smoke_proof\n1 minute ago\n00_WIDGET_SMOKE.executed.ipynb\n18 minutes ago\n00_WIDGET_SMOKE.ipynb\n6 seconds ago\n12_INTERACTIVE_LAB.ipynb\n6 seconds ago\nREADME.md\n1 minute ago\n-\nCode\nMarkdown\nRaw\nCXR local Qwen (faiss_gpu1)\nWidget smoke (browser)\n\nOpen this file in browser JupyterLab (not Cursor\u2019s notebook pane):\n\nhttp://127.0.0.1:8266/lab/tree/12_interactive_lab/00_WIDGET_SMOKE.ipynb\n\nIf you see a slider (not IntSlider(...) text), the Lab widget manager is working. Then the Interactive Lab pane",
+  "elapsed_s": 5.92
+}

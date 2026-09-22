@@ -1,0 +1,36 @@
+{
+  "name": "CXR MI/RepEng reference suite",
+  "version": 1,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "notes": [
+    "Runs only against a LIVE Jupyter kernel model (cxr_boot REUSE). Never start Streamlit as a second GPU load.",
+    "Curriculum notebooks are pedagogy; this suite is regression/goldens. Do not overwrite lesson notebooks to add cases — link by id.",
+    "Phase 1 seeds: E00 metrics + A/B separation sweep + causal MLP-zero candidate grid (from verified 09 run)."
+  ],
+  "experiments": [
+    {
+      "id": "E00_2_capture_width",
+      "tags": ["e00", "observe", "smoke"],
+      "lesson": "01_foundations/02_hidden_states + GUI E00.2",
+      "enabled": true
+    },
+    {
+      "id": "E00_3_block0_add_check",
+      "tags": ["e00", "observe", "smoke"],
+      "lesson": "01_foundations/03_residual_stream + GUI E00.3",
+      "enabled": true
+    },
+    {
+      "id": "SWEEP_sep_PROMPT_AB",
+      "tags": ["observe", "sweep", "representation"],
+      "lesson": "01_foundations/09_evolution_through_transformer §7",
+      "enabled": true
+    },
+    {
+      "id": "CAUSAL_mlp_zero_candidates",
+      "tags": ["intervene", "causal", "mlp"],
+      "lesson": "01_foundations/09_evolution_through_transformer §9",
+      "enabled": true
+    }
+  ]
+}

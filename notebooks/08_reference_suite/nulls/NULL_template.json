@@ -1,0 +1,9 @@
+{
+  "id": "NULL_template",
+  "status": "null",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "notes": "Placeholder for known-null / weak sites (e.g. L24-style). Add a runner + enable in registry when ready. Not executed in phase 1.",
+  "expect": {
+    "abs_delta_margin_max": 0.3
+  }
+}
