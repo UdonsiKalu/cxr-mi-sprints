@@ -1,10 +1,24 @@
 # CXR mechanistic interpretability — weekly sprints
 
-Using ingested doctors' notes from CXR, I'll investigate errors that arise from systemic failures at the Neural-Symbolic Boundary in LLM output.
+## Why this started
 
-Portfolio of **1–2 week research sprints** on Qwen internals (CXR oncology notes): small questions, fast measurements, a write-up.
+CXR reads **oncology doctors’ notes** and asks a language model questions about them: what treatment was given, whether it failed, what happens next.
 
-Live work runs on the Almera lab (Jupyter + one shared Qwen). This repo is the **public canon**: what we asked, what we ran, what we claim, and what we still do not know.
+When we did that, the answers were sometimes **wrong** even though the facts were sitting in the note. A typical failure: the note says FOLFOX was given, disease progressed, and FOLFOX was stopped — and the model still mixes up those events. That is a **neural–symbolic** miss: the text is in the prompt, but the model’s next-token machinery does not keep the facts straight.
+
+So this work did not start as abstract interpretability. It started from **CXR evaluation errors**. The question became: if we can look *inside* the model (activations, layers, directions) while it reads the same notes, can we see where the story falls apart — and then change something so the answers get more reliable?
+
+## What we aim to achieve
+
+1. **See** what the model actually represents when it reads a CXR note (this table: capture through residual decomposition).
+2. **Test** whether those internal pieces matter (later: intervene — steer, patch, ablate).
+3. **Fix the pipeline** around the failures we can name (compensate: prompts, checks, gates) — and only then consider training-time changes.
+
+This repo is the public write-up of that loop. Live runs are on the Almera lab (Jupyter + one shared Qwen). Notebooks hold the work; `sprints/` holds what we learned.
+
+## Observe — representation
+
+Read activations. Do not write the forward. **L2 = Euclidean norm**, not “layer 2”.
 
 | # | Topic | Notebook | What I intend to achieve |
 |---|--------|----------|--------------------------|
@@ -22,4 +36,4 @@ Live work runs on the Almera lab (Jupyter + one shared Qwen). This repo is the *
 | 12 | MLP features | [`12_mlp_features`](notebooks/02_observe/representation/12_mlp_features.ipynb) | What the MLP writes into the residual |
 | 13 | Residual decomposition | [`13_residual_decomposition`](notebooks/02_observe/representation/13_residual_decomposition.ipynb) | Split `h` into attn + MLP + residual pieces |
 
-Detailed chapters can be found here: [`curriculum.md`](curriculum.md).
+Other chapters: [`curriculum.md`](curriculum.md).
