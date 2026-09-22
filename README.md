@@ -2,11 +2,20 @@
 
 ## Why this started
 
-CXR reads **oncology doctors’ notes** and asks a language model questions about them: what treatment was given, whether it failed, what happens next.
+CXR reads **oncology doctors’ notes** and asks a language model questions about them (treatment given, failed, stopped). The facts are in the note. The answers were sometimes still wrong. That mismatch is what we mean by a **neural–symbolic** failure: symbols in, wrong next token out.
 
-When we did that, the answers were sometimes **wrong** even though the facts were sitting in the note. A typical failure: the note says FOLFOX was given, disease progressed, and FOLFOX was stopped — and the model still mixes up those events. That is a **neural–symbolic** miss: the text is in the prompt, but the model’s next-token machinery does not keep the facts straight.
+**Example (Qwen2.5-7B-Instruct, recorded on Almera)**
 
-So this work did not start as abstract interpretability. It started from **CXR evaluation errors**. The question became: if we can look *inside* the model (activations, layers, directions) while it reads the same notes, can we see where the story falls apart — and then change something so the answers get more reliable?
+| | |
+|--|--|
+| **Note** | Progress note: Oxaliplatin/5-FU course ended in March. Surveillance only. |
+| **Question** | Has FOLFOX stopped? Answer yes or no. |
+| **What it should say** | **Yes.** FOLFOX *is* oxaliplatin plus 5-FU. The course ended; the patient is on surveillance only. |
+| **What the model said** | **No.** *“Based on the information provided, it seems that the patient has completed a…”* (it preferred No; YES−NO logit margin ≈ −3.8). |
+
+Same pattern on the teaching note we use in the notebooks: *“Patient received FOLFOX. Disease progressed. FOLFOX was discontinued.”* Question: *Has first-line FOLFOX failed?* The note is a **yes**. The evaluation problem is the model not answering that way from the text it was given.
+
+This work did not start as abstract interpretability. It started from those **CXR evaluation errors**. If we look *inside* the model while it reads the same notes, can we see where the story falls apart — and then change something so the answers get more reliable?
 
 ## What we aim to achieve
 
