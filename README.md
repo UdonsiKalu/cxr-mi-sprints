@@ -43,4 +43,4 @@ Read activations. Do not write the forward. **L2 = Euclidean norm**, not “laye
 | 12 | MLP features | [`12_mlp_features`](notebooks/02_observe/representation/12_mlp_features.ipynb) | What the MLP writes into the residual |
 | 13 | Residual decomposition | [`13_residual_decomposition`](notebooks/02_observe/representation/13_residual_decomposition.ipynb) | Split `h` into attn + MLP + residual pieces |
 
-Other chapters: [`curriculum.md`](curriculum.md).
+Detailed chapters: [`curriculum.md`](curriculum.md).
