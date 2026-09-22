@@ -11,7 +11,7 @@ CXR reads **oncology doctors’ notes** and asks a language model questions abou
 | **Note** | Progress note: Oxaliplatin/5-FU course ended in March. Surveillance only. |
 | **Question** | Has FOLFOX stopped? Answer yes or no. |
 | **What it should say** | **Yes.** FOLFOX *is* oxaliplatin plus 5-FU. The course ended; the patient is on surveillance only. |
-| **What the model said** | **No.** *“Based on the information provided, it seems that the patient has completed a…”* (it preferred No; YES−NO logit margin ≈ −3.8). |
+| **What the model said** | **No.** *“Based on the information provided, it seems that the patient has completed a…”* |
 
 Same pattern on the teaching note we use in the notebooks: *“Patient received FOLFOX. Disease progressed. FOLFOX was discontinued.”* Question: *Has first-line FOLFOX failed?* The note is a **yes**. The evaluation problem is the model not answering that way from the text it was given.
 
