@@ -6,45 +6,24 @@ Portfolio of **1–2 week research sprints** on Qwen internals (CXR oncology not
 
 Live work runs on the Almera lab (Jupyter + one shared Qwen). This repo is the **public canon**: what we asked, what we ran, what we claim, and what we still do not know.
 
-Notebook tables (every chapter, every file): **[curriculum.md](curriculum.md)**.  
-Start notebook: [`00_START_HERE.ipynb`](notebooks/00_START_HERE.ipynb). GitHub is for reading; running is on Almera.
+## Observe — representation
 
-## This week
+Read activations. Do not write the forward. **L2 = Euclidean norm**, not “layer 2”.
 
-**Observe — representation:** capture last-token residual through residual decomposition (notebooks 01–13).
+| # | Topic | Notebook | What I intend to achieve |
+|---|--------|----------|--------------------------|
+| 1 | Capture last-token residual | [`01_capture`](notebooks/02_observe/representation/01_capture.ipynb) | One L20 last-token vector: shape, L2, first 10 dims |
+| 2 | Per-token L2 | [`02_positions`](notebooks/02_observe/representation/02_positions.ipynb) | Residual L2 at L20 for every token in the note |
+| 3 | Last-token L2 by layer | [`03_layer_sweep`](notebooks/02_observe/representation/03_layer_sweep.ipynb) | How last-token L2 changes from L0 to L27 |
+| 4 | Difference direction A − B | [`04_difference_vectors`](notebooks/02_observe/representation/04_difference_vectors.ipynb) | The vector `h_A − h_B` at L20 |
+| 5 | Cosine to A−B | [`05_cosine_similarity`](notebooks/02_observe/representation/05_cosine_similarity.ipynb) | How aligned a note is with that direction |
+| 6 | Project onto (A−B)/‖·‖ | [`06_direction_projection`](notebooks/02_observe/representation/06_direction_projection.ipynb) | A scalar score of the note on the unit A−B direction |
+| 7 | PCA / UMAP | [`07_pca_umap`](notebooks/02_observe/representation/07_pca_umap.ipynb) | 2D geometry of many residuals |
+| 8 | Linear probes | [`08_linear_probes`](notebooks/02_observe/representation/08_linear_probes.ipynb) | Whether a linear map can read a label out of `h` |
+| 9 | Chanin L20 SAE features | [`09_sae`](notebooks/02_observe/representation/09_sae.ipynb) | Sparse features on the L20 residual |
+| 10 | Attention patterns | [`10_attention_patterns`](notebooks/02_observe/representation/10_attention_patterns.ipynb) | Which tokens attend to which |
+| 11 | Per-head analysis | [`11_per_head`](notebooks/02_observe/representation/11_per_head.ipynb) | The same, one attention head at a time |
+| 12 | MLP features | [`12_mlp_features`](notebooks/02_observe/representation/12_mlp_features.ipynb) | What the MLP writes into the residual |
+| 13 | Residual decomposition | [`13_residual_decomposition`](notebooks/02_observe/representation/13_residual_decomposition.ipynb) | Split `h` into attn + MLP + residual pieces |
 
-| Activity | Status |
-|----------|--------|
-| Capture last-token residual | In progress |
-| Per-token L2 | This week |
-| Last-token L2 by layer | This week |
-| Difference direction A − B | This week |
-| Cosine / projection onto A−B | This week |
-| SAE features (L20) | This week |
-| PCA, probes, attention, heads, MLP, residual split | Planned (stubs) |
-
-Detail and links: [Observe — representation](curriculum.md#2-observe--representation). Board: [CXR MI weekly sprints](https://github.com/users/UdonsiKalu/projects/2).
-
-## Later sprints (high level)
-
-| Chapter | What it is |
-|---------|------------|
-| Foundations | How a transformer writes (tokens → residual → logits) |
-| Observe — output | Next-token logits, logit lens, margin |
-| Intervene | Write the forward — does it matter? |
-| Compensate | Work around it in text / tools |
-| Case studies | CXR oncology investigations |
-| Python skills / notes / suite | Tooling and frozen regression |
-
-## Sprint log
-
-| Week | Issue | Question | Outcome |
-|------|-------|----------|---------|
-| 2026-W38 | [#1](https://github.com/UdonsiKalu/cxr-mi-sprints/issues/1) | Observe Qwen from Jupyter without a second load | Done |
-| 2026-W39 | [#2](https://github.com/UdonsiKalu/cxr-mi-sprints/issues/2) | Observe representation 01 → 13 | This week |
-
-## Claim rule
-
-**Observe ≠ causal.** A Done write-up always states what we can and cannot say.
-
-Frozen demos: [cxr-evidence-grounding-lab](https://github.com/UdonsiKalu/cxr-evidence-grounding-lab).
+Other chapters (Foundations, Intervene, Compensate, …): [`curriculum.md`](curriculum.md).
