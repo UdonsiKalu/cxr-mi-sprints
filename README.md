@@ -22,4 +22,4 @@ Live work runs on the Almera lab (Jupyter + one shared Qwen). This repo is the *
 | 12 | MLP features | [`12_mlp_features`](notebooks/02_observe/representation/12_mlp_features.ipynb) | What the MLP writes into the residual |
 | 13 | Residual decomposition | [`13_residual_decomposition`](notebooks/02_observe/representation/13_residual_decomposition.ipynb) | Split `h` into attn + MLP + residual pieces |
 
-Other chapters (Foundations, Intervene, Compensate, …): [`curriculum.md`](curriculum.md).
+Detailed chapters can be found here: [`curriculum.md`](curriculum.md).
