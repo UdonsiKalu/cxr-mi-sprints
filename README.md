@@ -6,10 +6,6 @@ Portfolio of **1–2 week research sprints** on Qwen internals (CXR oncology not
 
 Live work runs on the Almera lab (Jupyter + one shared Qwen). This repo is the **public canon**: what we asked, what we ran, what we claim, and what we still do not know.
 
-## Observe — representation
-
-Read activations. Do not write the forward. **L2 = Euclidean norm**, not “layer 2”.
-
 | # | Topic | Notebook | What I intend to achieve |
 |---|--------|----------|--------------------------|
 | 1 | Capture last-token residual | [`01_capture`](notebooks/02_observe/representation/01_capture.ipynb) | One L20 last-token vector: shape, L2, first 10 dims |
