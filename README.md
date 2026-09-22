@@ -1,6 +1,6 @@
 # CXR mechanistic interpretability — weekly sprints
 
-Portfolio of **1–2 week research sprints** on Qwen internals (CXR oncology notes), following [Neel Nanda’s advice](https://www.alignmentforum.org/posts/jP9KDyMkchuv6tHwm/how-to-become-a-mechanistic-interpretability-researcher): small questions, fast measurements, a write-up, then **continue or pivot**.
+Portfolio of **1–2 week research sprints** on Qwen internals (CXR oncology notes), small questions, fast measurements, a write-up.
 
 Live work runs on the Almera lab (Jupyter + one shared Qwen). This repo is the **public canon**: what we asked, what we ran, what we claim, and what we still do not know.
 
