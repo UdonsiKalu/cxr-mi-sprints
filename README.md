@@ -13,7 +13,10 @@ CXR reads **oncology doctors’ notes** and asks a language model questions abou
 | **What it should say** | **Yes.** FOLFOX *is* oxaliplatin plus 5-FU. The course ended; the patient is on surveillance only. |
 | **What the model said** | **No.** Based on the information provided, FOLFOX has not stopped. (*“Based on the information provided, it seems that the patient has completed a…”*) |
 
->Same pattern on the teaching note we use in the notebooks: *“Patient received FOLFOX. Disease progressed. FOLFOX was discontinued.”* Question: *Has first-line FOLFOX failed?* The note is a **yes**. The evaluation problem is the model not answering that way from the text it was given.
+Same pattern on the teaching note we use in the notebooks: 
+>*“Patient received FOLFOX. Disease progressed. FOLFOX was discontinued.”* Question: *Has first-line FOLFOX failed?* The note is a **yes**.
+
+The evaluation problem is the model not answering that way from the text it was given. 
 
 This work did not start as abstract interpretability. It started from those **CXR evaluation errors**. If we look *inside* the model while it reads the same notes, can we see where the story falls apart — and then change something so the answers get more reliable?
 
